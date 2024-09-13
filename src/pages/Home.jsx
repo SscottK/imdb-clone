@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import MovieCard from '../components/MovieCard.jsx';
+import MovieCard from '../components/MovieCard';
 
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -11,7 +11,7 @@ const Home = () => {
     const searchMovies = async (e) => {
         try {
             e.preventDefault();
-            const response = await axios.get(`https://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`);
+            const response = await axios.get(`http://www.omdbapi.com/?s=${searchTerm}&apikey=${apiKey}`);
             setMovies(response.data.Search || [])
         } catch (error) {
             console.error(error)
@@ -30,7 +30,7 @@ const Home = () => {
             </form>
             <div className="movie-list">
                 {movies.map((movie) => {
-                    <MovieCard key={movie.imdbID} movie={movie} />
+                    return <MovieCard key={movie.imdbID} movie={movie} />
                 })}
             </div>
         </div>
