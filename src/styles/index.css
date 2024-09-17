@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -35,7 +40,7 @@
   }
   
   .movie-detail img {
-    max-width: 300px;
+    /* max-width: 300px; */
     border-radius: 10px;
     margin-bottom: 2rem;
   }
@@ -48,5 +53,13 @@
   .movie-detail p {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+  }
+  
+  .movie-card img {
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-card img:hover {
+    transform: scale(1.05);
   }
   

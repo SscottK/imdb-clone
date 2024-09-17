@@ -19,7 +19,7 @@ const MovieDetail = () => {
 
     return (
         <div className="movie-detail">
-        <img src={movie.Poster} alt={movie.Title} />
+        <img className="w-160 md:w-32 lg:w-480" src={movie.Poster} alt={movie.Title} />
         <h1>{movie.Title}</h1>
         <p>{movie.Plot}</p>
         <p><strong>Director:</strong> {movie.Director}</p>
