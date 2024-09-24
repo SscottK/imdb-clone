@@ -28,13 +28,20 @@ const Home = () => {
                     placeholder="Search movies..." 
                 />
                 <button type="submit">Search</button>
-            </form>
-            <div className={styles.movieList}>
-                {movies.map((movie) => {
+            </form>            
+            {movies.length === 0 ? 
+                <div className={styles.welcomeMessage}>
+                    <h1>Welcome to Movie Search!</h1>
+                    <p>Please type a movie into the search bar and then hit search</p>
+                </div> :
+                <div className={styles.movieList}>
+                
+            {movies.map((movie) => {
                     return <MovieCard key={movie.imdbID} movie={movie} />
                 })}
             </div>
-        </div>
+            }
+       </div>
     )
 }
 

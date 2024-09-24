@@ -1,13 +1,16 @@
 .movieDetail {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 2rem;
-    text-align: center;
+    text-align: left;
+    
+    
     img {
         max-width: 300px;
         border-radius: 10px;
         margin-bottom: 2rem;
+        
     }
     h1 {
         font-size: 2rem;
@@ -16,6 +19,15 @@
     p {
         font-size: 1rem;
         margin-bottom: 0.5rem;
+    }
+    hr {
+        width: 100%;
+    }
+    .elems {
+        border-bottom: 1px solid blue;
+        background-color: yellowgreen;
+        color: blue;
+        border-radius: 10px;
     }
 
   }

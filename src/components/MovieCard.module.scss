@@ -1,15 +1,23 @@
 .movieCard {
+    background-color: blueviolet;
+    border-radius: 10px;
     img {
         width: 100%;
         border-radius: 10px;
-        transition: transform 0.3s ease;  
+        transition: transform 0.3s ease;
+          
     }
     .movieInfo {
         text-align: center;
         margin-top: 0.5rem;
+        color: white;
+        
     }
     
   }
+a {
+    text-decoration: none;
+}
   
   
 .movieCard img:hover {

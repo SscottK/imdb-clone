@@ -20,14 +20,14 @@ const MovieDetail = () => {
 
     return (
         <div className={styles.movieDetail}>
-        <img src={movie.Poster} alt={movie.Title} />
-        <h1>{movie.Title}</h1>
-        <p>{movie.Plot}</p>
-        <p><strong>Director:</strong> {movie.Director}</p>
-        <p><strong>Cast:</strong> {movie.Actors}</p>
-        <p><strong>Genre:</strong> {movie.Genre}</p>
-        <p><strong>Year:</strong> {movie.Year}</p>
-      </div> 
+            <div className={styles.elems}><img src={movie.Poster} alt={movie.Title} /></div>            
+            <div className={styles.elems}><h1>{movie.Title}</h1></div>
+            <div className={styles.elems}><p>{movie.Plot}</p></div>
+            <div className={styles.elems}><p><strong>Director:</strong> {movie.Director}</p></div>
+            <div className={styles.elems}><p><strong>Cast:</strong> {movie.Actors}</p></div>
+            <div className={styles.elems}><p><strong>Genre:</strong> {movie.Genre}</p></div>
+            <div className={styles.elems}><p><strong>Year:</strong> {movie.Year}</p></div>
+        </div> 
     )
 }
 
