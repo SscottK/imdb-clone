@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import styles from './MovieDetail.module.scss'
 
 const MovieDetail = () => {
     const { id } = useParams();
@@ -18,8 +19,8 @@ const MovieDetail = () => {
     if (!movie) return <h1>Loading...</h1>;
 
     return (
-        <div className="movie-detail">
-        <img className="w-160 md:w-32 lg:w-480" src={movie.Poster} alt={movie.Title} />
+        <div className={styles.movieDetail}>
+        <img src={movie.Poster} alt={movie.Title} />
         <h1>{movie.Title}</h1>
         <p>{movie.Plot}</p>
         <p><strong>Director:</strong> {movie.Director}</p>

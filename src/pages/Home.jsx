@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import MovieCard from '../components/MovieCard';
+import styles from './Home.module.scss'
 
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -19,7 +20,7 @@ const Home = () => {
     };
 
     return (
-        <div className="home-container">
+        <div className={styles.homeContainer}>
             <form onSubmit={searchMovies}>
                 <input type="text" 
                     value={searchTerm} 
@@ -28,7 +29,7 @@ const Home = () => {
                 />
                 <button type="submit">Search</button>
             </form>
-            <div className="movie-list">
+            <div className={styles.movieList}>
                 {movies.map((movie) => {
                     return <MovieCard key={movie.imdbID} movie={movie} />
                 })}

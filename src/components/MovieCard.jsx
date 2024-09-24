@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import styles from './MovieCard.module.scss'
 
 const MovieCard = ({ movie }) => {
     return (
-        <div className='movie-card'>
+        <div className={styles.movieCard}>
             <Link to={`/movie/${movie.imdbID}`}>
-                <img className="w-16 md:w-32 lg:w-48" src={movie.Poster} alt={movie.Title} />
-                <div className='movie-info'>
+                <img src={movie.Poster} alt={movie.Title} />
+                <div className={styles.movieInfo}>
                     <h3>{movie.Title}</h3>
                     <p>{movie.Year}</p>
                 </div>
